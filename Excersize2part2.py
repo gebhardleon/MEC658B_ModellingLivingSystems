@@ -5,15 +5,16 @@ from sympy import symbols
 time_steps = 100000
 delta_l = 0.5
 L_vec = [10, 30, 50, 100]
-diff_vec = [100, 1000]
+diff_vec = [1, 10, 100, 1000]
 conv_time = []
 for diff in diff_vec:
     for L  in L_vec:
+
         print(f'L = {L}, diff = {diff}')
 
         conv_time.append(0)
         # Set initial time step
-        delta_t_max = 0.001
+        delta_t_max = 0.0001
         delta_t_min = 0.000001
 
         # Set convergence criteria
